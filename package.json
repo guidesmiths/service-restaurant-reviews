@@ -1,7 +1,7 @@
 {
-  "name": "mentoring-service-restaurants-reviews",
+  "name": "service-matteoaffinity",
   "version": "0.0.1",
-  "description": "...",
+  "description": "service API",
   "main": "index.js",
   "scripts": {
     "local": "SERVICE_ENV=local node index.js",

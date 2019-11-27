@@ -1,7 +1,4 @@
 const System = require('systemic');
 const { join } = require('path');
 
-module.exports = () =>
-	new System({ name: 'mentoring-service-restaurants-reviews' })
-		.bootstrap(join(__dirname, 'components'));
-
+module.exports = () => new System({ name: 'service-matteoaffinity' }).bootstrap(join(__dirname, 'components'));

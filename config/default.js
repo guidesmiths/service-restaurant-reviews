@@ -8,8 +8,8 @@ module.exports = {
 			swaggerOptions: {
 				swaggerDefinition: {
 					info: {
-						description: 'Documentation for mentoring-service-restaurants-reviews',
-						title: 'mentoring-service-restaurants-reviews',
+						description: 'Documentation for service-matteoaffinity',
+						title: 'service-matteoaffinity',
 						version: '1.0.0',
 					},
 					host: process.env.SERVICE_ENV || 'localhost:4000',
@@ -26,6 +26,23 @@ module.exports = {
 					},
 				},
 			},
+		},
+	},
+	metrics: {
+		key: process.env.APPINSIGHTS_INSTRUMENTATIONKEY,
+		internalLogging: false,
+		context: {
+			tags: {
+				'ai.cloud.role': process.env.npm_package_name,
+				'ai.cloud.roleInstance': process.env.HOSTNAME || 'local',
+			},
+		},
+		autoCollect: {
+			requests: true,
+			performance: true,
+			exceptions: true,
+			dependencies: true,
+			console: false,
 		},
 	},
 	logger: {

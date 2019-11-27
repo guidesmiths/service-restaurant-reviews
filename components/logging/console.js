@@ -39,8 +39,7 @@ module.exports = () => {
 		else log(colour(info.render(data)));
 	};
 
-
-	const start = async () => onMessage;
+	const start = (params, cb) => cb(null, onMessage);
 
 	return { start };
 };
