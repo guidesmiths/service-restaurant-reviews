@@ -1,6 +1,6 @@
 module.exports = () => {
 	const start = ({ app, controller }) => {
-		app.get('/test', (req, res, next) => {
+		app.get('/restaurants', (req, res, next) => {
 			controller
 				.getAllRestaurants()
 				.then(data => res.json(data))
