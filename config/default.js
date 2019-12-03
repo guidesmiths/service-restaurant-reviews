@@ -28,21 +28,18 @@ module.exports = {
 			},
 		},
 	},
-	metrics: {
-		key: process.env.APPINSIGHTS_INSTRUMENTATIONKEY,
-		internalLogging: false,
-		context: {
-			tags: {
-				'ai.cloud.role': process.env.npm_package_name,
-				'ai.cloud.roleInstance': process.env.HOSTNAME || 'local',
-			},
-		},
-		autoCollect: {
-			requests: true,
-			performance: true,
-			exceptions: true,
-			dependencies: true,
-			console: false,
+	pg: {
+		connection: {
+			user: process.env.POSTGRES_USER || 'postgres',
+			database: process.env.POSTGRES_DB || 'postgres',
+			password: process.env.POSTGRES_PASSWORD || 'postgres',
+			host: process.env.POSTGRES_HOST || 'localhost',
+			port: process.env.POSTGRES_PORT || 5433,
+			max: 10,
+			migrations: [{ directory: 'sql/migrations', filter: '\\.sql$' }],
+			idleTimeoutMillis: 30000,
+			ssl: false,
+			sql: 'sql/queries',
 		},
 	},
 	logger: {
