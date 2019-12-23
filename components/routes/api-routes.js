@@ -1,10 +1,12 @@
 module.exports = () => {
 	const start = ({ app, controller }) => {
-		app.get('/restaurants', (req, res, next) => {
-			controller
-				.getAllRestaurants()
-				.then(data => res.json(data))
-				.catch(next);
+		app.get('/api/v1/restaurants', async (req, res, next) => {
+			try {
+				const data = await controller.getAllRestaurants();
+				res.json(data);
+			} catch (error) {
+				next(error);
+			}
 		});
 		return Promise.resolve();
 	};
