@@ -15,7 +15,7 @@ describe('Integration Tests', () => {
 
 	it('returns list of restaurants', () =>
 		request
-			.get('/restaurants')
+			.get('/api/v1/restaurants')
 			.expect(200)
 			.then(response => {
 				expect(response.body.length).to.equal(2);
