@@ -4,13 +4,13 @@ node_js:
 services:
 - docker
 before_install:
-# install heroku CLI
 - npm run ci:up
-install:
-- npm install
+- docker build -t service-matteoaffinity .
 test:
-- npm run test:ci
+- docker run -d -p 4000:4000 service-matteoaffinity 
+- docker exec service-matteoaffinity sh -c "npm run test:ci"
 after_script:
 - npm run ci:down	
+- docker stop service-matteoaffinity
 on:
 branch: master
