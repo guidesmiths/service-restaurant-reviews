@@ -9,7 +9,9 @@ before_install:
 - docker run -d -p 4000:4000 service-matteoaffinity
 install:
 - echo "Hello"
+- sleep 4
 script:
+- docker ps
 - docker exec service-matteoaffinity sh -c "npm run test:ci"
 after_script:
 - npm run ci:down	
