@@ -3,18 +3,9 @@ node_js:
 - "10"
 services:
 - docker
-before_install:
-- npm run ci:up
-- docker build -t service-matteoaffinity .
-- docker run -d -p 4000:4000 service-matteoaffinity
 install:
-- echo "Hello"
-- sleep 4
+- npm ci
 script:
-- docker ps
-- docker exec service-matteoaffinity sh -c "npm run test:ci"
-after_script:
-- npm run ci:down	
-- docker stop service-matteoaffinity
+- npm test
 on:
 branch: master
