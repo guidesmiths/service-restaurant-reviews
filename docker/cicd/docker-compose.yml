@@ -3,7 +3,21 @@ version: '3'
 services:
   db:
     ports:
-      - 5433:5432
+      - 5432:5432
     image: postgres:10-alpine
     container_name: postgres-db
     restart: always
+    networks:
+      - test_net
+  service:
+    build: ../../
+    container_name: service-matteoaffinity
+    ports:
+      - 4000:4000
+    command: ['sh', '-c', 'tail -f /dev/null']
+    depends_on:
+      - db
+    networks:
+      - test_net
+networks:
+  test_net:
