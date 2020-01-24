@@ -4,14 +4,24 @@ const supertest = require('supertest');
 
 describe('Integration Tests', () => {
 	let request;
+	let pgApi;
 	const sys = system();
 
 	before(async () => {
-		const { app } = await sys.start();
+		const { app, pg } = await sys.start();
+		pgApi = pg;
 		request = supertest(app);
 	});
 
-	after(() => sys.stop());
+	beforeEach(async () => {
+		await pgApi.query('truncateall');
+		await pgApi.query('insertmockdata');
+	});
+
+	after(async () => {
+		await pgApi.query('truncateall');
+		sys.stop();
+	});
 
 	it('returns list of restaurants', () =>
 		request

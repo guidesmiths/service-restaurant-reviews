@@ -1,0 +1,2 @@
+TRUNCATE restaurants.restaurant RESTART IDENTITY CASCADE;
+TRUNCATE restaurants.comment RESTART IDENTITY CASCADE;
