@@ -1,0 +1,1 @@
+ALTER TABLE restaurants.restaurant ADD COLUMN img TEXT;
