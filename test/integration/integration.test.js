@@ -28,6 +28,6 @@ describe('Integration Tests', () => {
 			.get('/api/v1/restaurants')
 			.expect(200)
 			.then(response => {
-				expect(response.body.length).to.equal(2);
+				expect(response.body.length).to.equal(6);
 			}));
 });
