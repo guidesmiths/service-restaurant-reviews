@@ -1,8 +1,7 @@
 module.exports = () => {
-	const start = async ({ pg, logger }) => {
+	const start = async ({ pg }) => {
 		const getAllRestaurants = async () => {
 			const t = await pg.formattedQuery('all-restaurants');
-			logger.info(t.rows);
 			return t.rows;
 		};
 
