@@ -42,6 +42,9 @@ module.exports = {
 			sql: 'sql/queries',
 		},
 	},
+	auth: {
+		googleClientId: process.env.GOOGLE_CLIENT_ID,
+	},
 	logger: {
 		transport: 'console',
 		include: [
