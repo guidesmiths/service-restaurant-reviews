@@ -1,11 +1,13 @@
 const expect = require('expect.js');
 const system = require('../../system');
 const supertest = require('supertest');
+const initStubAuth = require('./stubs/initStubAuth');
 
 describe('Integration Tests', () => {
 	let request;
 	let pgApi;
-	const sys = system();
+	const sys = system().remove('auth');
+	sys.set('auth', initStubAuth()).dependsOn();
 
 	before(async () => {
 		const { app, pg } = await sys.start();
