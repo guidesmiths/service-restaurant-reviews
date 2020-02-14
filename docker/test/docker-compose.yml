@@ -3,7 +3,7 @@ version: '3'
 services:
   db:
     ports:
-      - 5433:5432
+      - 5432:5432
     image: postgres:10-alpine
     container_name: postgres-db
     restart: always
