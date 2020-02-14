@@ -12,7 +12,7 @@ module.exports = {
 			database: 'postgres',
 			password: 'postgres',
 			host: 'postgres-db',
-			port: 5432,
+			port: 5433,
 			ssl: false,
 			sql: ['sql/queries', 'test/sql/queries'],
 		},
