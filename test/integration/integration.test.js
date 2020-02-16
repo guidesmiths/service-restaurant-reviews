@@ -12,7 +12,6 @@ describe('Integration Tests', () => {
 	before(async () => {
 		const { app, pg } = await sys.start();
 		pgApi = pg;
-		console.log(pgApi);
 		request = supertest(app);
 	});
 

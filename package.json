@@ -8,7 +8,7 @@
 		"start": "node index.js",
 		"db:up": "docker-compose --file ./docker/test/docker-compose.yml pull && docker-compose --file ./docker/test/docker-compose.yml up -d --force-recreate",
 		"db:down": "docker-compose --file ./docker/test/docker-compose.yml down",
-		"test:ci": "SERVICE_ENV=test mocha --reporter spec './test/**/*.test.js'",
+		"test:ci": "SERVICE_ENV=ci mocha --reporter spec './test/**/*.test.js'",
 		"test:it": "npm run db:up && SERVICE_ENV=test mocha --reporter spec './test/integration/*.test.js' && npm run db:down",
 		"test": "npm run db:up && sleep 2 && SERVICE_ENV=test mocha --reporter spec './test/**/*.test.js' && npm run db:down",
 		"ci:up": "docker-compose --file ./docker/cicd/docker-compose.yml pull && docker-compose --file ./docker/cicd/docker-compose.yml up -d --build --force-recreate",

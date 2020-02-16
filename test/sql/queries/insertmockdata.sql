@@ -4,4 +4,3 @@ INSERT INTO restaurants.restaurant (name, address, rate, avgprice, img) VALUES (
 INSERT INTO restaurants.restaurant (name, address, rate, avgprice, img) VALUES ('New York Burger', 'Calle Falsa 124', 5.4, 10.55, 'https://restauracionnews.com/wp-content/uploads/2018/10/NYBurgerMoraleja.jpg');
 INSERT INTO restaurants.restaurant (name, address, rate, avgprice, img) VALUES ('La Mucca', 'Calle Falsa 124', 6.4, 10.55, 'https://grupolamusa.com/media/grupo-la-musa-latina-madrid-4-rincon-lamparas-techo.jpg');
 INSERT INTO restaurants.restaurant (name, address, rate, avgprice, img) VALUES ('Ramen', 'Calle Falsa 124', 6.2, 10.55, 'https://i2.wp.com/gastroactivity.com/wp-content/uploads/2017/10/Ramen-Shifu-Grupo-Ayala-Japon.jpg?resize=800%2C600&ssl=1');
-
