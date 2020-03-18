@@ -1,6 +1,2 @@
-INSERT INTO restaurants.restaurant (name, address, rate, avgprice, img) VALUES ('Longinos', 'Calle Falsa', 7.8, 11.0, 'https://media-cdn.tripadvisor.com/media/photo-s/10/a2/5d/e2/photo0jpg.jpg');
-INSERT INTO restaurants.restaurant (name, address, rate, avgprice, img) VALUES ('VIPS', 'Calle Falsa 124', 5.4, 10.55, 'https://marinedacity.com/blog/wp-content/uploads/2015/11/VIPSOK.jpg');
-INSERT INTO restaurants.restaurant (name, address, rate, avgprice, img) VALUES ('Goiko Grill', 'Calle Falsa', 7.8, 11.0, 'https://s04.s3c.es/imag/_v0/770x420/1/0/3/490x_goiko-grill-coqueta.jpg');
-INSERT INTO restaurants.restaurant (name, address, rate, avgprice, img) VALUES ('New York Burger', 'Calle Falsa 124', 5.4, 10.55, 'https://restauracionnews.com/wp-content/uploads/2018/10/NYBurgerMoraleja.jpg');
-INSERT INTO restaurants.restaurant (name, address, rate, avgprice, img) VALUES ('La Mucca', 'Calle Falsa 124', 6.4, 10.55, 'https://grupolamusa.com/media/grupo-la-musa-latina-madrid-4-rincon-lamparas-techo.jpg');
-INSERT INTO restaurants.restaurant (name, address, rate, avgprice, img) VALUES ('Ramen', 'Calle Falsa 124', 6.2, 10.55, 'https://i2.wp.com/gastroactivity.com/wp-content/uploads/2017/10/Ramen-Shifu-Grupo-Ayala-Japon.jpg?resize=800%2C600&ssl=1');
+INSERT INTO restaurants.restaurant (id, name, address, avgprice, distance, cuisine, img) VALUES (1, 'Longinos', 'Paseo General Martinez Campos 49, 28010 Madrid', 11.90, 1, 'Casera', 'https://res.cloudinary.com/dlwaiuulu/image/upload/v1584394220/longinos_tc3mk7.jpg');
+INSERT INTO restaurants.review (restaurant_id, authorname, authorimg, date, content, rate, cuisinerate, pricerate, settingrate) VALUES (1,'Daniel','','2020-03-01','hello',7.0,8.0,5.0,6.0), (1,'Adriana','','2020-03-02','hola',4.0,2.5,5.5,6.5);
