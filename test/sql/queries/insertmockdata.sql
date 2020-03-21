@@ -1,0 +1,2 @@
+INSERT INTO restaurants.restaurant (id, name, address, avgprice, distance, cuisine, img) VALUES (1, 'Longinos', 'Paseo General Martinez Campos 49, 28010 Madrid', 11.90, 1, 'Casera', 'https://res.cloudinary.com/dlwaiuulu/image/upload/v1584394220/longinos_tc3mk7.jpg');
+INSERT INTO restaurants.review (restaurant_id, authorname, authorimg, date, content, rate, cuisinerate, pricerate, settingrate) VALUES (1,'Daniel','','2020-03-01','hello',7.0,8.0,5.0,6.0), (1,'Adriana','','2020-03-02','hola',4.0,2.5,5.5,6.5);
