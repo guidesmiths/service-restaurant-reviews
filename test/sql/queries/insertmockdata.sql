@@ -9,4 +9,4 @@ INSERT INTO restaurants.restaurant (id, name, address, avgprice, distance, cuisi
 INSERT INTO restaurants.restaurant (id, name, address, avgprice, distance, cuisine, img) VALUES (9, 'Makkila', 'Calle de Serrano, 110, 28006 Madrid', 14.90, 9, 'International', 'https://i.postimg.cc/Y0qGtrxY/Makkila-FVI.jpg');
 INSERT INTO restaurants.restaurant (id, name, address, avgprice, distance, cuisine, img) VALUES (10, 'Lateral', 'Paseo de la Castellana, 42, 28046 Madrid', 13.70, 6, 'International', 'https://i.postimg.cc/ydK3rXgf/Castellana-42.jpg');
 
-INSERT INTO restaurants.review (restaurant_id, authorname, authorimg, date, content, rate, cuisinerate, pricerate, settingrate) VALUES (1,'Daniel','','2020-03-01','hello',7.0,8.0,5.0,6.0), (1,'Adriana','','2020-03-02','hola',4.0,2.5,5.5,6.5);
+INSERT INTO restaurants.review (restaurant_id, authorname, authorimg, date, content, rate, cuisinerate, pricerate, settingrate) VALUES (1,'Daniel','','2020-03-01','hello',70,80,50,60), (1,'Adriana','','2020-03-02','hola',40,25,55,65);

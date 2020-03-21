@@ -16,6 +16,7 @@ module.exports = () => {
 				if (!(payloadFromGoogle.email && payloadFromGoogle.email.endsWith('guidesmiths.com'))) {
 					throw new Error('Invalid email - you need a GuideSmiths email to browse this app');
 				}
+				res.locals.userData = { authorname: payloadFromGoogle.name, authorimg: payloadFromGoogle.picture };
 				return next();
 			} catch (error) {
 				return res.status(404).send(`Authentication failed: ${error.message}`);

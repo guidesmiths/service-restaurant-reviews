@@ -22,7 +22,8 @@ module.exports = () => {
 		});
 		app.post('/api/v1/review', auth.authenticate, async (req, res, next) => {
 			try {
-				const data = await controller.insertReview(req.body);
+				const review = { ...req.body, ...res.locals.userData };
+				const data = await controller.insertReview(review);
 				res.json(data);
 			} catch (error) {
 				next(error);
