@@ -30,7 +30,7 @@ describe('Integration Tests', () => {
 			.get('/api/v1/restaurants')
 			.expect(200)
 			.then(response => {
-				expect(response.body.length).to.equal(1);
+				expect(response.body.length).to.equal(10);
 			}));
 	it('returns list of reviews for a certain restaurant', () =>
 		request
