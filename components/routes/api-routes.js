@@ -1,4 +1,5 @@
 const bodyParser = require('body-parser');
+const { getCurrentDate } = require('../../lib/index');
 
 module.exports = () => {
 	const start = ({ app, controller, auth }) => {
@@ -22,8 +23,7 @@ module.exports = () => {
 		});
 		app.post('/api/v1/review', auth.authenticate, async (req, res, next) => {
 			try {
-				const review = { ...req.body, ...res.locals.userData };
-				const data = await controller.insertReview(review);
+				const data = await controller.insertReview({ ...req.body, ...res.locals.userData, date: getCurrentDate() });
 				res.json(data);
 			} catch (error) {
 				next(error);
