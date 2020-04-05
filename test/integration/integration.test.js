@@ -49,7 +49,7 @@ describe('Integration Tests', () => {
 	it('adds a new review for a certain restaurant', async () => {
 		await request
 			.post('/api/v1/review')
-			.send({ restaurant_id: 1, authorname: 'Carlos', authorimg: '', date: '2020-03-01', content: 'holi', rate: 10.0, cuisinerate: 9.5, pricerate: 9.8, settingrate: 9.7 })
+			.send({ restaurant_id: 1, authorname: 'Carlos', authorimg: '', content: 'holi', rate: 10.0, cuisinerate: 9.5, pricerate: 9.8, settingrate: 9.7 })
 			.expect(200)
 			.then(response => {
 				expect(response.body[0].content).to.equal('holi');
