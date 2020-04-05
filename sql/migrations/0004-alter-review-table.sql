@@ -1,0 +1,2 @@
+ALTER TABLE restaurants.review
+ALTER COLUMN date TYPE TIMESTAMP;
