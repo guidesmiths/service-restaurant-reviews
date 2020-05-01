@@ -1,0 +1,16 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - confabulous > async > lodash:
+        patched: '2020-05-01T08:17:31.008Z'
+    - systemic-express > async > lodash:
+        patched: '2020-05-01T08:17:31.008Z'
+    - handy-postgres > marv > lodash:
+        patched: '2020-05-01T08:17:31.008Z'
+    - handy-postgres > marv-pg-driver > lodash:
+        patched: '2020-05-01T08:17:31.008Z'
+    - handy-postgres > marv-pg-driver > marv > lodash:
+        patched: '2020-05-01T08:17:31.008Z'
