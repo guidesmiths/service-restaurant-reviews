@@ -7,7 +7,7 @@ module.exports = () => {
 
 		/**
 		 * GET /__/manifest
-     * @summary This endpoint serves the manifest
+		 * @summary This endpoint serves the manifest
 		 * @tags Admin - Everything about admin routes
 		 * @return {object} 200 - Sucessful response
 		*/
