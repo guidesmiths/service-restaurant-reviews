@@ -6,25 +6,24 @@ module.exports = {
 	routes: {
 		admin: {
 			swaggerOptions: {
-				swaggerDefinition: {
-					info: {
-						description: 'Documentation for service-matteoaffinity',
-						title: 'service-matteoaffinity',
-						version: '1.0.0',
-					},
-					host: process.env.SERVICE_ENV || 'localhost:4000',
-					basePath: '/v1',
-					produces: ['application/json'],
-					schemes: ['http'],
-					securityDefinitions: {
-						JWT: {
-							type: 'apiKey',
-							in: 'header',
-							name: 'Authorization',
-							description: '',
-						},
+				info: {
+					description: 'Documentation for service-matteoaffinity',
+					title: 'service-matteoaffinity',
+					version: '1.0.0',
+					contact: {
+						name: 'Guidesmiths',
 					},
 				},
+				servers: [],
+				security: {
+					JWT: {
+						type: 'apiKey',
+						in: 'header',
+						name: 'Authorization',
+					},
+				},
+				baseDir: process.cwd(),
+				filesPattern: './**/**-routes.js',
 			},
 		},
 	},
