@@ -7,8 +7,8 @@ module.exports = {
 		admin: {
 			swaggerOptions: {
 				info: {
-					description: 'Documentation for service-matteoaffinity',
-					title: 'service-matteoaffinity',
+					description: 'Documentation for service-restaurant-reviews',
+					title: 'service-restaurant-reviews',
 					version: '1.0.0',
 					contact: {
 						name: 'Guidesmiths',

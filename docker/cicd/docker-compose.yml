@@ -15,7 +15,7 @@ services:
       - test_net
   service:
     build: ../../
-    container_name: service-matteoaffinity
+    container_name: service-restaurant-reviews
     ports:
       - 4000:4000
     command: ['sh', '-c', 'tail -f /dev/null']
